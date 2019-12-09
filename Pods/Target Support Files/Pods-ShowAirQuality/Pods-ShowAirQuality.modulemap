@@ -1,0 +1,6 @@
+framework module Pods_ShowAirQuality {
+  umbrella header "Pods-ShowAirQuality-umbrella.h"
+
+  export *
+  module * { export * }
+}

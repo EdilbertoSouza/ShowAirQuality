@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B755750239C307F00DF03A0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B75574F239C307F00DF03A0 /* City.swift */; };
 		0B81E7AC239C1DCC009A4749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */; };
 		0B81E7AE239C1DCC009A4749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81E7AD239C1DCC009A4749 /* ViewController.swift */; };
 		0B81E7B1239C1DCC009A4749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7AF239C1DCC009A4749 /* Main.storyboard */; };
 		0B81E7B3239C1DD1009A4749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7B2239C1DD1009A4749 /* Assets.xcassets */; };
 		0B81E7B6239C1DD1009A4749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7B4239C1DD1009A4749 /* LaunchScreen.storyboard */; };
+		F01B3F1567A06C485DC7BC3F /* Pods_ShowAirQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A8496563FB1AAD4EA3427 /* Pods_ShowAirQuality.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08E02BDCC717426F4CAC9E9A /* Pods-ShowAirQuality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowAirQuality.release.xcconfig"; path = "Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality.release.xcconfig"; sourceTree = "<group>"; };
+		0B75574F239C307F00DF03A0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		0B81E7A8239C1DCC009A4749 /* ShowAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B81E7AD239C1DCC009A4749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		0B81E7B2239C1DD1009A4749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B81E7B5239C1DD1009A4749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B81E7B7239C1DD1009A4749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		231A8496563FB1AAD4EA3427 /* Pods_ShowAirQuality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowAirQuality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C6EC1CCEEBA8E1B534049 /* Pods-ShowAirQuality.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowAirQuality.debug.xcconfig"; path = "Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01B3F1567A06C485DC7BC3F /* Pods_ShowAirQuality.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				0B81E7AA239C1DCC009A4749 /* ShowAirQuality */,
 				0B81E7A9239C1DCC009A4749 /* Products */,
+				DF18C4783FF7C4C4E015B698 /* Pods */,
+				1860F5E24D4E2C9D05A9C7DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +65,30 @@
 			children = (
 				0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */,
 				0B81E7AD239C1DCC009A4749 /* ViewController.swift */,
+				0B75574F239C307F00DF03A0 /* City.swift */,
 				0B81E7AF239C1DCC009A4749 /* Main.storyboard */,
 				0B81E7B2239C1DD1009A4749 /* Assets.xcassets */,
 				0B81E7B4239C1DD1009A4749 /* LaunchScreen.storyboard */,
 				0B81E7B7239C1DD1009A4749 /* Info.plist */,
 			);
 			path = ShowAirQuality;
+			sourceTree = "<group>";
+		};
+		1860F5E24D4E2C9D05A9C7DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				231A8496563FB1AAD4EA3427 /* Pods_ShowAirQuality.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF18C4783FF7C4C4E015B698 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				408C6EC1CCEEBA8E1B534049 /* Pods-ShowAirQuality.debug.xcconfig */,
+				08E02BDCC717426F4CAC9E9A /* Pods-ShowAirQuality.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B81E7BA239C1DD1009A4749 /* Build configuration list for PBXNativeTarget "ShowAirQuality" */;
 			buildPhases = (
+				63C2FE9FEB68B2B8FD0E1DE0 /* [CP] Check Pods Manifest.lock */,
 				0B81E7A4239C1DCC009A4749 /* Sources */,
 				0B81E7A5239C1DCC009A4749 /* Frameworks */,
 				0B81E7A6239C1DCC009A4749 /* Resources */,
+				A063EC50F0EDE3B74B5DB912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63C2FE9FEB68B2B8FD0E1DE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShowAirQuality-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A063EC50F0EDE3B74B5DB912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B81E7A4239C1DCC009A4749 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +208,7 @@
 			files = (
 				0B81E7AE239C1DCC009A4749 /* ViewController.swift in Sources */,
 				0B81E7AC239C1DCC009A4749 /* AppDelegate.swift in Sources */,
+				0B755750239C307F00DF03A0 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,6 +352,7 @@
 		};
 		0B81E7BB239C1DD1009A4749 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 408C6EC1CCEEBA8E1B534049 /* Pods-ShowAirQuality.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +370,7 @@
 		};
 		0B81E7BC239C1DD1009A4749 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08E02BDCC717426F4CAC9E9A /* Pods-ShowAirQuality.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
