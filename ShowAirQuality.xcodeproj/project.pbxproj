@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2AD06023A07B370058E34D /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AD05F23A07B370058E34D /* CityCell.swift */; };
 		0B755750239C307F00DF03A0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B75574F239C307F00DF03A0 /* City.swift */; };
 		0B81E7AC239C1DCC009A4749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */; };
 		0B81E7AE239C1DCC009A4749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81E7AD239C1DCC009A4749 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		08E02BDCC717426F4CAC9E9A /* Pods-ShowAirQuality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowAirQuality.release.xcconfig"; path = "Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality.release.xcconfig"; sourceTree = "<group>"; };
+		0B2AD05F23A07B370058E34D /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		0B75574F239C307F00DF03A0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		0B81E7A8239C1DCC009A4749 /* ShowAirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowAirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				0B81E7B2239C1DD1009A4749 /* Assets.xcassets */,
 				0B81E7B4239C1DD1009A4749 /* LaunchScreen.storyboard */,
 				0B81E7B7239C1DD1009A4749 /* Info.plist */,
+				0B2AD05F23A07B370058E34D /* CityCell.swift */,
 			);
 			path = ShowAirQuality;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				0B81E7AE239C1DCC009A4749 /* ViewController.swift in Sources */,
 				0B81E7AC239C1DCC009A4749 /* AppDelegate.swift in Sources */,
+				0B2AD06023A07B370058E34D /* CityCell.swift in Sources */,
 				0B755750239C307F00DF03A0 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

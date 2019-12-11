@@ -49,9 +49,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celReuso", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celReuso", for: indexPath) as! CityCell
         let cidade = cidades[indexPath.row]
-        cell.textLabel?.text = cidade
+        //cell.textLabel?.text = cidade
+        cell.lbCidade?.text = cidade
+        cell.lbDescricao?.text = "Uma boa cidade para se morar..."
         return cell
     }
     
@@ -93,39 +95,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    fileprivate func getCidades() {
+    private func getCidades() {
+        self.cidades = []
         if let url = URL(string: urlbase+"/cidades?estado="+self.estado) {
             let task = URLSession.shared.dataTask(with: url) { (result, response, error) in
                 if error != nil {
-                    print("Erro ao tentar carregar dados da web")
+                    self.msgInfo("Erro ao tentar carregar dados da web", "Atencao")
                 }
                 do {
                     let jsonResult = try JSONSerialization.jsonObject(with: result!, options:.mutableContainers)
                     let dictResult = jsonResult as! NSDictionary
                     if let status = dictResult["status"] as? String {
-                        if status != "success" {
-                            print("Erro na resposta do servidor")
-                        }
                         if let data = dictResult["data"] as? NSArray {
-                            self.cidades = []
                             for i in 0...data.count-1 {
                                 if let elemento = data[i] as? [String: String] {
-                                    if let dado = elemento["city"] {
-                                        self.cidades.append(dado)
+                                    if status == "success" {
+                                        if let dado = elemento["city"] {
+                                            self.cidades.append(dado)
+                                        }
+                                    } else {
+                                        if let dado = elemento["message"] {
+                                            self.msgInfo(dado, "Atencao")
+                                        }
                                     }
                                 }
-                            }
-                            DispatchQueue.main.async {
-                                self.table.reloadData()
                             }
                         }
                     }
                 } catch {
-                    print("Erro ao formatar retorno")
+                    self.msgInfo("Erro ao formatar retorno", "Atencao")
+                }
+                DispatchQueue.main.async {
+                    self.table.reloadData()
                 }
             }
             task.resume()
         }
+    }
+    
+    private func msgInfo(_ message: String, _ title: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 
 }
