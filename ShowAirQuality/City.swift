@@ -15,8 +15,9 @@ class City {
     var aqius: Int = 0
     var tp: Int = 0
     var hu: Int = 0
+    var pr: Int = 0
         
-    convenience init(name: String, state: String, country: String, aqius: Int, tp: Int, hu: Int) {
+    convenience init(_ name: String, _ state: String, _ country: String, _ aqius: Int, _ tp: Int, _ hu: Int) {
         self.init()
         self.name = name
         self.state = state
@@ -24,5 +25,6 @@ class City {
         self.aqius = aqius
         self.tp = tp
         self.hu = hu
+        self.pr = pr
     }
 }

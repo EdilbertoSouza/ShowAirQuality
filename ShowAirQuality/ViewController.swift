@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    //let urlstate: String = "https://api.airvisual.com/v2/states?country=usa&api_key=045f8466-d157-4520-b54f-4b70662f7a63"
+    //let urlbase: String = "https://api.airvisual.com/v2"
+    //let apikey: String = "api_key=045f8466-d157-4520-b54f-4b70662f7a63"
     let urlbase: String = "https://e42ea33c-9d9f-4f70-ab7d-65f2353c772d.mock.pstmn.io"
     var estados: [String] = ["Alabama", "California","Texas"]
     var estado: String = "Alabama"
@@ -98,6 +99,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private func getCidades() {
         self.cidades = []
         if let url = URL(string: urlbase+"/cidades?estado="+self.estado) {
+        //if let url = URL(string: urlbase+"/cities?state="+self.estado+"&country=USA&"+apikey) {
             let task = URLSession.shared.dataTask(with: url) { (result, response, error) in
                 if error != nil {
                     self.msgInfo("Erro ao tentar carregar dados da web", "Atencao")
@@ -130,6 +132,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
             }
             task.resume()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailViewSegue" {
+            if let indexPath = table.indexPathForSelectedRow {
+                let cidadeSelecionada = self.cidades[indexPath.row]
+                let vcDestino = segue.destination as! DetailViewController
+                vcDestino.cidade = cidadeSelecionada                
+            }
         }
     }
     

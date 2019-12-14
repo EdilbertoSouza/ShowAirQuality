@@ -14,6 +14,7 @@
 		0B81E7B1239C1DCC009A4749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7AF239C1DCC009A4749 /* Main.storyboard */; };
 		0B81E7B3239C1DD1009A4749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7B2239C1DD1009A4749 /* Assets.xcassets */; };
 		0B81E7B6239C1DD1009A4749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B81E7B4239C1DD1009A4749 /* LaunchScreen.storyboard */; };
+		0BF13F1023A43E33001BC70A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF13F0F23A43E33001BC70A /* DetailViewController.swift */; };
 		F01B3F1567A06C485DC7BC3F /* Pods_ShowAirQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A8496563FB1AAD4EA3427 /* Pods_ShowAirQuality.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		0B81E7B2239C1DD1009A4749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B81E7B5239C1DD1009A4749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B81E7B7239C1DD1009A4749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF13F0F23A43E33001BC70A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		231A8496563FB1AAD4EA3427 /* Pods_ShowAirQuality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowAirQuality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C6EC1CCEEBA8E1B534049 /* Pods-ShowAirQuality.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowAirQuality.debug.xcconfig"; path = "Target Support Files/Pods-ShowAirQuality/Pods-ShowAirQuality.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,12 +69,13 @@
 			children = (
 				0B81E7AB239C1DCC009A4749 /* AppDelegate.swift */,
 				0B81E7AD239C1DCC009A4749 /* ViewController.swift */,
+				0B2AD05F23A07B370058E34D /* CityCell.swift */,
+				0BF13F0F23A43E33001BC70A /* DetailViewController.swift */,
 				0B75574F239C307F00DF03A0 /* City.swift */,
 				0B81E7AF239C1DCC009A4749 /* Main.storyboard */,
 				0B81E7B2239C1DD1009A4749 /* Assets.xcassets */,
 				0B81E7B4239C1DD1009A4749 /* LaunchScreen.storyboard */,
 				0B81E7B7239C1DD1009A4749 /* Info.plist */,
-				0B2AD05F23A07B370058E34D /* CityCell.swift */,
 			);
 			path = ShowAirQuality;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				0B81E7AE239C1DCC009A4749 /* ViewController.swift in Sources */,
 				0B81E7AC239C1DCC009A4749 /* AppDelegate.swift in Sources */,
+				0BF13F1023A43E33001BC70A /* DetailViewController.swift in Sources */,
 				0B2AD06023A07B370058E34D /* CityCell.swift in Sources */,
 				0B755750239C307F00DF03A0 /* City.swift in Sources */,
 			);
