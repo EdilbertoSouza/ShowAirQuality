@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    let urlbase: String = "https://e42ea33c-9d9f-4f70-ab7d-65f2353c772d.mock.pstmn.io"
-    //let urlbase: String = "https://api.airvisual.com/v2"
-    //let apikey: String = "api_key=045f8466-d157-4520-b54f-4b70662f7a63"
+    //let urlbase: String = "https://e42ea33c-9d9f-4f70-ab7d-65f2353c772d.mock.pstmn.io"
+    let urlbase: String = "https://api.airvisual.com/v2"
+    let apikey: String = "api_key=045f8466-d157-4520-b54f-4b70662f7a63"
 
     var city: City = City()
     var cidade: String!
@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        /*
         if cidade != nil {
             if estado == "California" {
                 city = City(cidade, estado, "USA", 144, 18, 100)
@@ -44,11 +44,13 @@ class DetailViewController: UIViewController {
             }
             showCidade()
         }
+        */
+        getCidade()
     }
     
     private func getCidade() {
-        if let url = URL(string: urlbase+"/cidade?nome="+self.cidade) {
-        //if let url = URL(string: urlbase+"/city?city="+self.cidade+"&state="+self.estado+"&country=USA&"+apikey) {
+        //if let url = URL(string: urlbase+"/cidade?nome="+self.cidade) {
+        if let url = URL(string: urlbase+"/city?city="+self.cidade+"&state="+self.estado+"&country=USA&"+apikey) {
             let task = URLSession.shared.dataTask(with: url) { (result, response, error) in
                 if error != nil {
                     self.msgInfo("Erro ao tentar carregar dados da web", "Atencao")
