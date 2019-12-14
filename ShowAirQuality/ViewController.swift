@@ -140,7 +140,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let indexPath = table.indexPathForSelectedRow {
                 let cidadeSelecionada = self.cidades[indexPath.row]
                 let vcDestino = segue.destination as! DetailViewController
-                vcDestino.cidade = cidadeSelecionada                
+                vcDestino.cidade = cidadeSelecionada
+                vcDestino.estado = self.estado
             }
         }
     }

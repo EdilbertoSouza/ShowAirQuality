@@ -27,19 +27,22 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lbCig: UILabel!
     @IBOutlet weak var ivSta: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBAction func btAtualizar(_ sender: Any) {
         if cidade != nil {
-            city = City(cidade, "California", "USA", 6, 9, 100)
-            showCidade()
+            getCidade()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(false)
+        super.viewDidAppear(animated)
+        
         if cidade != nil {
-            //getCidade()
+            if estado == "California" {
+                city = City(cidade, estado, "USA", 144, 18, 100)
+            } else {
+                city = City(cidade, estado, "USA", 6, 9, 100)
+            }
+            showCidade()
         }
     }
     
@@ -109,7 +112,7 @@ class DetailViewController: UIViewController {
         lbTp.text = String(self.city.tp) + "oC"
         lbHu.text = String(self.city.hu) + "%"
         lbPr.text = String(self.city.pr)
-        lbCig.text = "Tantos cigarros por mes"
+        lbCig.text = String(self.city.aqius * 15 / 35) + " cigarros por mes"
         ivSta.image = (self.city.aqius > 100) ? UIImage(imageLiteralResourceName: "ar_poluido.jpg") : UIImage(imageLiteralResourceName: "ar_puro.jpg")
     }
     
